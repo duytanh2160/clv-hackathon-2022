@@ -37,7 +37,7 @@ function changeInputWidth(ele) {
 function addAreaToScreen() {
     if (!IS_AREA_CREATE_ALLOW) return;
 
-    $.get('/pages/components/help_area.html', function (data) {
+    $.get('../../pages/components/help_area.html', function (data) {
         //passing param.
         var obj = [{
                 code: "param1",
@@ -131,7 +131,7 @@ function closePopup(event) {
 }
 
 function startRatting() {
-    $.get('/pages/components/startRatting.html', function (data) {
+    $.get('../../pages/components/startRatting.html', function (data) {
         let index = document.querySelectorAll(".help_area").length;
         let idPopup = 'Rat_' + '' + index;
         let idPopup2 = 'xRat_' + '' + index;
