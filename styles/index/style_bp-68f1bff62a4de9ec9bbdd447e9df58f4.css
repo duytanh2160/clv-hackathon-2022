@@ -92,7 +92,7 @@ input[type=number] {
     border: 0;
     font-size: 0;
     cursor: pointer;
-    background: url(/img/toolbar/header/help_deactv-b8744b4bcb9561dc02b97ca063b18b8f.png) no-repeat;
+    background: url(../../img/toolbar/header/help_deactv-b8744b4bcb9561dc02b97ca063b18b8f.png) no-repeat;
     margin: 10px 5px 10px 10px;
     border-radius: 15px;
 }

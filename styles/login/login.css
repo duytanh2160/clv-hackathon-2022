@@ -2,7 +2,7 @@
     height: 100vh;
     margin: 0;
     background-color: #FFFFFF;
-    background-image: url('/resources/login/blueprint-background.png');
+    background-image: url('../../resources/login/blueprint-background.png');
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;

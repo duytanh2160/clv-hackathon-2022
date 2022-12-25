@@ -47,7 +47,7 @@
     z-index: 9;
     height: 120px;
     width: 500px;
-    background-image: url("resources/users/default.webp");
+    background-image: url("../../resources/users/default.webp");
     background-size: cover;
 }
   
