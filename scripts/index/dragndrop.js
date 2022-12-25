@@ -68,13 +68,14 @@ function dragElement(elmnt) {
       newLeft = (elmnt.offsetLeft - pos1);
 
       if(!ele.getAttribute("isAttached") || ele.getAttribute("isAttached") != "true" || ele.className == "help_area"){
+        if(ele.className == "sticker" && ele.id != ("usr_" + CUR_USER_OBJ.user_id)) return;
+
         elmnt.style.top = (newTop < 0 ? 0 : newTop) + "px";
         elmnt.style.left = (newLeft < 0 ? 0 : newLeft) + "px";
+        elmnt.style.zIndex = '999';
 
-        if(ele.className == "sticker" && ele.id == ("usr_" + CUR_USER_OBJ.user_id)){
-          CUR_USER_OBJ.top = parseFloat(elmnt.style.top.split("px").join(""));
-          CUR_USER_OBJ.left = parseFloat(elmnt.style.left.split("px").join(""));
-        }
+        CUR_USER_OBJ.top = parseFloat(elmnt.style.top.split("px").join(""));
+        CUR_USER_OBJ.left = parseFloat(elmnt.style.left.split("px").join(""));
       }
   }
 

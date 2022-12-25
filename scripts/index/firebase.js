@@ -65,3 +65,26 @@
     return await promise;
  }
 
+
+ window["updateData"] = async function(obj){
+    if(!obj.user_id) {
+        console.error("No user_id.");
+        return; 
+    }
+
+    let str = "";
+    Object.keys(obj).forEach((att,i) => {
+        str += `${i == 0 ? "{" : ","}"${att}" : "${obj[att]}"`
+        if(i == (Object.keys(obj).length - 1)) str += "}";
+    })
+
+    let promise = new Promise((resolve, reject) => {
+        update(ref(db, "person-list/" + obj.user_id), JSON.parse(str))
+        .then(() => {
+            resolve("S");
+        });;
+    });
+
+
+    return await promise;
+ }
