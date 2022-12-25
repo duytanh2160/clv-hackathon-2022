@@ -2,9 +2,9 @@
     var blLoginCheck = localStorage.getItem("login") ? true : false;
     strUrlRedirect = "";
     if(blLoginCheck){
-        strUrlRedirect = "../../pages/index/home.html";
+        strUrlRedirect = "/pages/index/home.html";
     }else{
-        strUrlRedirect = "../../pages/login/login.html"
+        strUrlRedirect = "/pages/login/login.html"
     }
         window.location.replace(strUrlRedirect);   
 </script>
