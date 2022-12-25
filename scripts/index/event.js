@@ -32,6 +32,8 @@ function processInputChange(e) {
 
 function changeInputWidth(ele) {
     ele.style.width = (ele.value.length >= ele.placeholder.length ? ele.value.length : ele.placeholder.length) + "ch";
+
+    updateData({user_id : CUR_USER_OBJ.user_id, emotion_text : `😀Ξ${ele.value}`});
 }
 
 function addAreaToScreen() {

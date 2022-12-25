@@ -47,6 +47,7 @@ async function update(){
         }else{
             if(usrList[usr_id].login_status == 'N') {
                 doc.querySelector('img').style.borderColor = "";
+                doc.querySelector('.shwEmoj').style.visibility = "hidden";
                 return;
             }
 
@@ -55,8 +56,26 @@ async function update(){
 
             if(usr_id == CUR_USER_OBJ.user_id) return;
             //update for other users only
+
+            //1. set location
             doc.style.top = usrList[usr_id].top + 'px';
             doc.style.left = usrList[usr_id].left + 'px';
+
+            //2. set emotion visibility
+            if(usrList[usr_id].emotion_flg == "Y"){
+                doc.querySelector('.shwEmoj').style.visibility = "visible";
+            }else{
+                doc.querySelector('.shwEmoj').style.visibility = "hidden";
+            }
+
+            //3. set emotion text
+            var txt = usrList[usr_id].emotion_text.split("Ξ");
+            if(txt.length > 1){
+                doc.querySelectorAll('input')[0].value = txt[0];
+                doc.querySelectorAll('input')[1].value = txt[1];
+
+                doc.querySelectorAll('input')[1].style.width = (doc.querySelectorAll('input')[1].value.length >= doc.querySelectorAll('input')[1].placeholder.length ? doc.querySelectorAll('input')[1].value.length : doc.querySelectorAll('input')[1].placeholder.length) + "ch";
+            }
         }
     })
 }
@@ -67,5 +86,5 @@ async function update(){
 
 function close(){
     console.log("send logout to server.");
-    updateData({user_id : CUR_USER_OBJ.user_id, login_status : "N"});
+    updateData({user_id : CUR_USER_OBJ.user_id, login_status : "N", emotion_flg : "N", emotion_text : "😀Ξ"});
 }

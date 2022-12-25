@@ -55,7 +55,15 @@ function openEmotion(ele) {
 
     if (ele.style.visibility === "hidden") {
         ele.style.visibility = "visible";
+        updateData({
+            user_id : CUR_USER_OBJ.user_id,
+            emotion_flg : "Y"
+        });
     } else {
         ele.style.visibility = "hidden";
+        updateData({
+            user_id : CUR_USER_OBJ.user_id,
+            emotion_flg : "N"
+        });
     }
 }
