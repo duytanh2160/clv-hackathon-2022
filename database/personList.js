@@ -41,7 +41,7 @@ function personListMisspunch(){
         let check = personList[property].punch
         if(!check){
          
-            $.get('/pages/components/help_area2.html', function(data){
+            $.get('../../pages/components/help_area2.html', function(data){
                 if(data){                   
                    let abc =  data.replace('Person1',personList[property].firstName);
                     abc = abc.replace('srcImg',personList[property].img)

@@ -5,7 +5,7 @@ function hideClassBur() {
 }
 
 function addEditableLabel(){
-    $.get('/pages/components/editableLabel.html', function(data){
+    $.get('../../pages/components/editableLabel.html', function(data){
         if(data){
             let abc =  data
             $('#editableLabel').prepend(abc);
