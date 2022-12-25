@@ -1,0 +1,7 @@
+.zoom_efx {
+    transition: transform .3s;
+}
+  
+.zoom_efx:hover {
+    transform: scale(1.025); 
+}

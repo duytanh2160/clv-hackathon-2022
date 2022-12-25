@@ -1,0 +1,88 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="login-pf">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="noindex, nofollow">
+
+            <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Log in to CLV Authentication</title>
+    <link rel="icon" href="/auth/resources/s4jei/login/blueprint/img/favicon-16x16.png" />
+            <link href="/styles/login/global.css" rel="stylesheet" />
+            <link href="/styles/login/sizing.css" rel="stylesheet" />
+            <link href="/styles/login/login.css" rel="stylesheet" />
+            <!-- <script src="jquery.min.js" type="text/javascript"></script> -->
+                <script src="/scripts/login/validate.js" type="text/javascript"></script>
+                <!-- <script src="material-input.js" type="text/javascript"></script> -->
+                <!-- <script src="main.js" type="text/javascript"></script> -->
+                <script src="/scripts/login/user.js" type="text/javascript"></script>
+</head>
+
+<body class="">
+  <div class="login-pf-page">
+    <div class="card-pf ">
+      <header class="login-pf-header">
+        <h1 id="kc-page-title"></h1>
+      </header>
+      <div id="kc-content">
+        <div id="kc-content-wrapper">
+
+        <div id="kc-form" >
+            <div id="kc-form-wrapper" >
+                <p class="kc-invalid-credential">
+                </p>
+                    <div class="form-group material-control">
+                        <input
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="USER ID"
+                            value=""
+                            class="form-control"
+                                autofocus
+                        />
+                    </div>
+
+                    <div class="form-group material-control">
+                        <input 
+                            id="password"
+                            type="password"
+                            name="password"
+                            placeholder="PASSWORD"
+                            class="form-control" 
+                        />
+                    </div>
+                    <div class="form-group login-pf-settings">
+                        <div id="kc-form-options">
+                                <div class="checkbox">
+                                    <label>
+                                            <input id="rememberMe" name="rememberMe" type="checkbox"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="">
+                            </div>
+                    </div>
+                    <div id="kc-form-buttons" class="form-group">
+                        <input type="hidden" id="id-hidden-input" name="credentialId" />
+                        <button 
+                            name="login"                          
+                            id="submit-btn"
+                            class="btn btn-default btn-block btn-lg"
+                            onclick="validate()"
+                        >
+                            Login to your account
+                        </button>
+                    </div>
+            </div>
+        </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

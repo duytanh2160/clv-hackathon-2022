@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+<style>
+body div#smileys  {
+  align-items: center;
+  display: flex;
+  font-family: Helvetica, sans-serif;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+}
+body div#smileys  {
+  font-size: 15px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+form#smileys input[type=radio] {
+  -webkit-appearance: none;
+  width: 90px;
+  height: 90px;
+  border: none;
+  cursor: pointer;
+  transition: border 0.2s ease;
+  filter: grayscale(100%);
+  margin: 0 5px;
+  transition: all 0.2s ease;
+}
+form#smileys input[type=radio]:hover, form#smileys input[type=radio]:checked {
+  filter: grayscale(0);
+}
+form#smileys input[type=radio]:focus {
+  outline: 0;
+}
+form#smileys input[type=radio].happy {
+  background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/happy_ampvnc.svg") center;
+  background-size: cover;
+}
+form#smileys input[type=radio].neutral {
+  background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/neutral_t3q8hz.svg") center;
+  background-size: cover;
+}
+form#smileys input[type=radio].sad {
+  background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/sad_bj1tuj.svg") center;
+  background-size: cover;
+}
+
+.mtt {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  color: #999;
+  text-decoration: none;
+}
+.mtt span {
+  color: #e74c3c;
+}
+.mtt:hover {
+  color: #666;
+}
+.mtt:hover span {
+  color: #c0392b;
+}/*# sourceMappingURL=styleRat.css.map */
+</style>
+  </head>
+  <body>
+    <div
+      id="Rat_"
+      class="help_area"
+      name="person0"
+      style="top: 267px; left: 456px"
+    >
+      <div id="content">
+        <table cellspacing="0" cellpadding="0">
+          <tr>
+            <td
+              id="help_area_headertext"
+              style="text-align: left; width: 80px;"
+            >
+              <label>Person 1</label>
+            </td>
+
+            <td id="help_area_input" style="text-align: left">
+              <input style="width: 370px;"
+                class="format-input"
+                type="text"
+                size="30"
+                placeholder="Your comment!"
+              />
+            </td>
+            <td id="help_area_headertext" style="text-align: left">
+              <div>
+                <button
+                  id="xRat_"
+                  type="button"
+                  class="btn-close"
+                  aria-label="Close"
+                  style="color: red"
+                  onclick="closeRat(this.id)"
+                >
+                  X
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+             <img src="../../resources/home/kitty.png" style="height: 100px;width: 100px;" alt="">
+            </td>
+            <td colspan="3">
+              
+              <div class="lists" id="help_area_body-2">
+                
+                <form id="smileys" style="margin-left: 100px;padding-top: 20px;">
+                  
+                  <input  id="xRat_" type="radio" name="smiley" value="sad" class="sad"onclick="closeRat(this.id)">
+                  <input  id="xRat_" type="radio" name="smiley" value="neutral" class="neutral"onclick="closeRat(this.id)">
+                  <input id="xRat_"  type="radio" name="smiley" value="happy" class="happy" checked="checked" onclick="closeRat(this.id)">
+                  
+                </form>
+              </div>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+<script>
+
+  const INPUTS = document.querySelectorAll('#smileys input');
+const updateValue = e => document.querySelector('#result').innerHTML = e.target.value;
+
+INPUTS.forEach(el => el.addEventListener('click', e => updateValue(e)));
+</script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  </body>
+</html>

@@ -1,0 +1,10 @@
+- press Add Area, move current user's Avatar to inside the Help Area
+- "Emotion" should be a little shift above from the Avatar
+- Change the way to open Emotion to double click (??)
+- Make the button "Add Area" look better, more UI UX :))
+- Fix the rating star (?)
+-
+
+Optional if time's possible
+- Drag Avatar to Help Area
+- Make the Avatar slowly show into the screen (like pop effect) 

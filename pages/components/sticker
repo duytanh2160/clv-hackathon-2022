@@ -1,0 +1,34 @@
+<div class="sticker" id="usr_${user_id}" style="top: ${top}px; left: ${left}px;">
+    <div class="rounded-pill opacity-25 shwEmoj" style="visibility: hidden">
+        <div class="bubble">
+            <input class="format" id="emoji-button" type="button" value="😀"
+                style="font-size: large;">
+            <input name="input_emotion" class="format" type="text" placeholder="Your emotions!"
+                style="font-size: large; width:14ch" />
+        </div>
+        <div class="pointer"></div>
+    </div>
+    <div class="zoom_efx" id="content">
+        <div class="rounded-circle" id="sticker_body1" onclick="openEmotion(this)">
+            <img src="${profile_pic}" class="img-responsive rounded-circle"
+                alt="person" style="height: 100px;width: 100px" draggable="false">
+        </div>
+    </div>
+    <div class="profile">
+        <div class="container-fluid custom">
+            <span class="label label-info">${user_name}</span>
+            <button type="button" class="btn btn-primary">ITO FIN <span class="badge">Track
+                    Lead</span></button>
+            <button type="button" class="btn btn-primary">SOG Report <span
+                    class="badge">PIC</span></button>
+            <br />
+            <span class="label label-success">SQL Tunring</span>
+            <span class="label label-success">FIN Biz</span>
+            <span class="label label-success">Webix</span>
+        </div>
+    </div>
+
+<script>
+    dragElement(document.getElementById("usr_${user_id}"));
+</script>
+</div>

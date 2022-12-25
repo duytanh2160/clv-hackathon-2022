@@ -1,0 +1,58 @@
+.sticker {
+    display: table;
+    position: absolute;
+}
+
+
+.sticker p {
+    position: relative;
+    max-width: 20em;
+    background-color: #fff;
+    padding: 0.2em 0.5em;
+    font-size: 1.0em;
+    box-shadow: 0 0.125rem 0.5rem rgb(0 0 0 / 30%), 0 0.0625rem 0.125rem rgb(0 0 0 / 20%);
+}
+
+.sticker p::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 1.5em;
+	border: .75rem solid transparent;
+	border-top: none;
+	border-bottom-color: #fff;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
+}
+
+.sticker table{
+    border:none;
+}
+
+.sticker #sticker_body {
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid #d3d3d3;
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+}
+  
+.sticker #sticker_headertext {
+    padding: 1px;
+    z-index: 10;
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.4);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 13px;
+    text-align: right;
+}
+
+.sticker #sticker_emo {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: yellow;
+    border: 3px solid red;
+}

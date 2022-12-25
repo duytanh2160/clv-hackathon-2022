@@ -1,0 +1,17 @@
+.profile {
+   display: none;
+   position: absolute;
+   bottom: -55%;
+   left: 5%;
+   right: 5%;
+   padding: .1em;
+}
+
+.custom {
+   min-width: 200px;
+   overflow: hidden;
+ }
+
+.zoom_efx:hover ~ .profile {
+   display: block;
+ }

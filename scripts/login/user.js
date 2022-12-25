@@ -1,0 +1,1 @@
+users = {username:"user", password:"pass" };
