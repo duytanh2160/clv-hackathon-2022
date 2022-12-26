@@ -38,6 +38,8 @@ function changeInputWidth(ele) {
 
 function addAreaToScreen() {
     if (!IS_AREA_CREATE_ALLOW) return;
+    
+    IS_AREA_CREATE_ALLOW = false;
 
     $.get('../../pages/components/help_area.html', function (data) {
         //passing param.
@@ -83,8 +85,6 @@ function dropCurrentUserToArea(ele) {
 function validValue() {
     var value = document.getElementById("slOption").value;
     if (value == 0) {
-        IS_AREA_CREATE_ALLOW = false;
-
         document.getElementById("slOption").style.color = "#CC0000";
         document.getElementById("sos").style.color = "gray";
         document.getElementById("inv").style.color = "gray";
@@ -97,7 +97,6 @@ function validValue() {
         document.getElementById("help_area_body").style.backgroundRepeat = "no-repeat";
         stsMsg = 0;
     } else if (value == 1) {
-        IS_AREA_CREATE_ALLOW = true;
         document.getElementById("slOption").style.color = "#3366FF";
         document.getElementById("sos").style.color = "gray";
         document.getElementById("inv").style.color = "gray";
@@ -110,7 +109,6 @@ function validValue() {
         document.getElementById("help_area_body").style.backgroundRepeat = "no-repeat";
         stsMsg = 1;
     } else {
-        IS_AREA_CREATE_ALLOW = true;
         document.getElementById("slOption").style.color = "gray";
         document.getElementById("sos").style.color = "gray";
         document.getElementById("inv").style.color = "gray";
@@ -121,6 +119,8 @@ function validValue() {
 }
 
 function closePopup(event) {
+    IS_AREA_CREATE_ALLOW = true;
+
     event = event.substring(1);
     var usrEle = document.getElementById("usr_" + CUR_USER_OBJ.user_id);
 
