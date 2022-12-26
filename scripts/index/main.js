@@ -18,6 +18,8 @@ async function start(){
                 user_id : CUR_USER_OBJ.user_id,
                 login_status : "Y"
             });
+
+            initEmojiButton(document.querySelector(`#usr_${CUR_USER_OBJ.user_id}`).querySelector('#emoji-button'));
         }
     }
 

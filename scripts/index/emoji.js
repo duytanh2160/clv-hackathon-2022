@@ -1,9 +1,3 @@
-window.addEventListener('DOMContentLoaded', () => {
-    EmojiButton(document.querySelector('#emoji-button'), function (emoji) {
-        document.getElementById('emoji-button').value = emoji;
-    });
-});
-
 (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
     i[r] = i[r] || function () {
@@ -18,6 +12,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 ga('create', 'UA-46156385-1', 'cssscript.com');
 ga('send', 'pageview');
+
+
+function initEmojiButton(button){
+    EmojiButton(button, function (emoji) {
+        button.value = emoji;
+        updateData({user_id : CUR_USER_OBJ.user_id, emotion_text : `${button.value}Ξ${button.nextElementSibling.value}`});
+    });
+}
 
 function openEmotion(ele) {
     var stickerEle = ele;
